@@ -8,7 +8,7 @@ require('dotenv').config();
 const tipo_linea = require ('./routes/tipo_linea.js');
 const tipo_marca = require ('./routes/tipo_marca.js');
 const vehiculos = require ('./routes/vehiculos.js');
-// const registros = require ('./routes/totalregistros.js');
+const registros = require ('./routes/totalregistros.js');
 
 
 // Middlewares
@@ -19,7 +19,7 @@ app.use(express.json());
 app.use('/api/', vehiculos);
 app.use('/api/', tipo_marca);
 app.use('/api/', tipo_linea);
-// app.use('/api/', registros);
+app.use('/api/', registros);
 
 
 // Configuración de metodos
