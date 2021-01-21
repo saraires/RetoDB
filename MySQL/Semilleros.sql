@@ -2,17 +2,14 @@
 -- mysql -u sarai < MySQl\Semilleros.sql; 
 USE Semilleros
 
-DROP TABLE IF EXISTS vehiculos;
-DROP TABLE IF EXISTS modelo;
-DROP TABLE IF EXISTS tipo_linea;
-DROP TABLE IF EXISTS tipo_marca;
+DROP TABLE IF EXISTS vehiculos, modelo, tipo_linea, tipo_marca;
 
-CREATE TABLE modelo (
-    id_modelo INT(5) PRIMARY KEY AUTO_INCREMENT,
-    anios YEAR NOT NULL,
-    marca VARCHAR(255) NOT NULL,
-    carroceria VARCHAR(255) -- descapotable, monovolumen, dos volumenes, tres volumenes, familiar
-);
+-- CREATE TABLE modelo (
+--     id_modelo INT(5) PRIMARY KEY AUTO_INCREMENT,
+--     anios YEAR NOT NULL,
+--     marca VARCHAR(255) NOT NULL,
+--     carroceria VARCHAR(255) -- descapotable, monovolumen, dos volumenes, tres volumenes, familiar
+-- );
 
 CREATE TABLE tipo_marca (
     -- Campos NULL
@@ -40,7 +37,7 @@ CREATE TABLE vehiculos (
     lo desea*/
     nro_placa VARCHAR(150) PRIMARY KEY,
     id_linea INT(5) NOT NULL, -- null
-    id_modelo INT(5),
+    id_modelo ENUM ('1960', '1970', '1980', '1990', '2000', '2010'),
     fecha_ven_seguro DATE NOT NULL,
     fecha_ven_tecnomecanica DATE NOT NULL,
     fecha_ven_contratodo DATE -- null
@@ -49,7 +46,7 @@ CREATE TABLE vehiculos (
 ALTER TABLE vehiculos
     ADD CONSTRAINT `(vehiculos-tipo_linea)`
     FOREIGN KEY (`id_modelo`) 
-    REFERENCES `modelo`(`id_modelo`),
+    REFERENCES `modelo`(`anios`),
     ADD CONSTRAINT `id_linea(vehiculos-tipo_linea)`
     FOREIGN KEY (`id_linea`) 
     REFERENCES `tipo_linea`(`id_linea`);
