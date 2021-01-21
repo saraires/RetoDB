@@ -1,0 +1,608 @@
+{
+	"info": {
+		"_postman_id": "362fff82-ae75-4633-aee8-1cfcab19acd8",
+		"name": "RetoBD",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "vehiculo",
+			"item": [
+				{
+					"name": "GET",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/vehiculo",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"vehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nro_placa\" : \"AAC-113\",\r\n    \"id_linea\" : 1,\r\n    \"id_modelo\" : \"2000\",\r\n    \"fecha_ven_seguro\" : \"2021/03/14\",\r\n    \"fecha_ven_tecnomecanica\" : \"2021/03/14\",\r\n    \"fecha_ven_contratodo\" : \"2021/03/20\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/vehiculo",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"vehiculo"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tipo_marca",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/tipo_marca",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"tipo_marca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n        \"id_marca\": 5,\r\n        \"desc_marca\": \"Ford Fiesta\",\r\n        \"activo\": \"N\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/tipo_marca",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"tipo_marca"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tipo_linea",
+			"item": [
+				{
+					"name": "GET",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/tipo_linea",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"tipo_linea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n   \r\n    {\r\n        \"nro_placa\": \"AAL-111\",\r\n        \"id_linea\": 8,\r\n        \"id_modelo\": \"1990\",\r\n        \"fecha_ven_seguro\": \"2021-03-14\",\r\n        \"fecha_ven_tecnomecanica\": \"2021-03-14\",\r\n        \"fecha_ven_contratodo\": \"2021-03-20\"\r\n    }"
+						},
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/tipo_linea",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"tipo_linea"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Total_registros",
+			"item": [
+				{
+					"name": "GET (regVehiculos)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/regVehiculos",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"regVehiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (regLinea)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/regLinea",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"regLinea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (regMarca)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/regMarca",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"regMarca"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (modelo max-min)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/modeloMax-Min",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"modeloMax-Min"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (cantidadMarcas)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/cantidadMarcas",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"cantidadMarcas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (rangoFechas)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/rangoFechas",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"rangoFechas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (rangoModelo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/rangoModelo",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"rangoModelo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (update)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/update",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (insertarRegistro)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/insertarRegistro",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"insertarRegistro"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (consultaUnica)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/consultaUnica",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"consultaUnica"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (consultaUnicaActivo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/consultaUnicaActivo",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"consultaUnicaActivo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (sumar)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/sumar",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"sumar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (promedio)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/promedio",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"promedio"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (act-inac)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/act-inac",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"act-inac"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (inner)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/inner",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"inner"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (left)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/left",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"left"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (ultimoPuntoVehiculo)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/ultimopuntoVehiculo",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"ultimopuntoVehiculo"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (ultimoPuntoTipo_linea)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/ultimopuntoTipo_linea",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								"ultimopuntoTipo_linea"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET (ultimoPuntoTipo_marca)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://retobd.herokuapp.com/api/",
+							"protocol": "https",
+							"host": [
+								"retobd",
+								"herokuapp",
+								"com"
+							],
+							"path": [
+								"api",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

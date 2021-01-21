@@ -5,7 +5,7 @@
 const mysql = require("mysql2");
 require('dotenv').config(); // Dotenv: Permite leer los archivos con variables de entorno .env
 
-const conexion_mysql = mysql.createConnection({
+const conexion_mysql = mysql.createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,
